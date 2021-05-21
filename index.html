@@ -278,24 +278,10 @@
 						<br/>
 						<br/>
 						<div>
-	 			        <form method="post" id="loginform" class="navbar-form" role="form">
-	 				    <div class="form-group">
-	 					<input id="email" name="PlexEmail" style="border-color:#E5A00D; background-color:#000000B3;" type="text" placeholder="Plex Email oder Benutzername" autofocus required class="form-control">     
-	 				    </div>
-	 				    <div style="position: relative;" class="form-group">
-	 					     <input id="password" name="PlexPassword" style="border-color:#E5A00D; background-color:#000000B3;" type="password" placeholder="Plex Password" required class="form-control">							 
-							 <a id="lnkforget" class="hyperlink" style="position: absolute;top: 7px;right: 1px;" href=" https://www.plex.tv/sign-in/password-reset/" target="_blank">Vergessen&nbsp;<i class="fa fa-question-circle" aria-hidden="true"></i></a>					
-                             <!-- <a id="lnkforget" class="hyperlink" style="position: absolute;top: 7px;right: 0px;" href="" data-toggle="modal" data-target="#pass">Forgot&nbsp;<i class="fa fa-question-circle" aria-hidden="true"></i></a> -->
-                        </div>					
-	 				    <div style="padding-left: 10px" class="checkbox c-checkbox">
-	 					    <label id="remember">
-	 				        <input type="checkbox" id="indeterminate-checkbox" name="rememberme" value="true" checked>
-	 					    <span class="fa fa-check"></span>Erinnere Mich
-						    </label>
-	 				    </div>
-	 					     <button type="submit" name="action" class="btn btn-primary"><i class="fas fa-sign-in-alt" aria-hidden="true"></i>&nbsp;Einloggen</button>
+	 			        <form>
+						     <a type="button" href="https://overseerr.mystreamnet.club" class="btn btn-primary"><i class="fas fa-sign-in-alt" aria-hidden="true"></i>&nbsp;EINLOGGEN</a>
 							 oder
-							 <a type="button" href="./beinvited?lang=de" class="btn btn-primary"><i class="fas fa-user-plus" aria-hidden="true"></i>&nbsp;Beitreten</a>    
+							 <a type="button" href="https://discord.gg/Aea4uuS" class="btn btn-primary"><i class="fas fa-user-plus" aria-hidden="true"></i>&nbsp;BEITRETEN</a>    
 	                    </form>
 					    </div>
 					    <br/>
@@ -327,16 +313,16 @@
 	 				     <!-- Nav tabs -->
 	 						<ul style=" padding-top: 60px;" class="text-gambodge nav nav-tabs">
 	 							<li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;
-								<?php echo $lang['home']; ?></a>
+								Startseite
 	 							</li>
 	 			      	        <li><a href="#devices" data-toggle="tab"><i class="fas fa-play-circle" aria-hidden="true"></i>&nbsp;
-								<?php echo $lang['media']; ?></a>
+								Medienclient
 	 							</li>
 	 							<li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
-								<?php echo $lang['contact']; ?></a>
+								Kontaktiere uns
 	 							</li>
 	 							<li><a href="#faq" data-toggle="tab"><i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;
-								<?php echo $lang['faq']; ?></a>
+								Fragen und Antworten</a>
 	 							</li>
 	 						</ul>
 	 				     <!-- Tab panes -->
@@ -345,12 +331,15 @@
 	 				        <div class="tab-content">
 
 	 					        <div id="home" class="tab-pane fade in active">
-	 							   <?php echo $lang['homebutton']; ?>
+	 							   <h2 class="container text-gray-chateau page-header" style="border-color: #3F4245;padding-top: 10px;padding-bottom: 10px;width: 50%;">Das ultimative Streaming Erlebnis</h2> 				               
+								   <a type="button" href="./releases" class="btn btn-primary"><i class="far fa-play-circle" aria-hidden="true"></i>&nbsp;Kürzlich hinzugefügte Filme / TV-Serien</a>
 								   <br/>
 								   <br/>
-	 							   <?php echo $lang['home1']; ?>
+	 							   <p><span class="text-gamboge">Filme</span> und <span class="text-gamboge">Fernsehsendungen</span> kommen und gehen regelmäßig auf <span class="text-gamboge">Netflix,</span> was bedeutet, dass Sie möglicherweise die Hälfte Ihres Lieblingsfilms hinter sich haben, wenn er aus dem Dienst genommen wird.<br/><br/>Auf <span class="text-gamboge">StreamNet</span> haben Sie für immer Zugriff auf Ihre Lieblingsfilme und Fernsehsendungen, sie werden nie gelöscht.<br/>
+	 				               <br/>
+	 					           <span class="text-gamboge">StreamNet</span> ist ein täglich aktualisierter deutsch / englischer Medienserver für Ihre <span class="text-gamboge"> Plex </span>Umgebung. Melden Sie sich an und erhalten Sie Zugang zu einer riesigen Medienbibliothek mit Filmen und Fernsehsendungen.</p>
 
-						            <?php
+						         <!--  <?php
 						             require_once ('plexpyAPI.module.php');
 									 $stats = plexpyAPI('get_libraries')['response']['data'];
 						             $stat_array = array();
@@ -360,7 +349,7 @@
 								            $stat_array["Episodes"] = $section['child_count'];
 										}
 									}
-						            ?>
+						            ?> 
 
 						            <div class="main-header">
 	 					                <div class="logo">
@@ -387,20 +376,88 @@
 	 					                    </div>
 					                    </div>
 					                </div>
-				                </div>
+				                </div> -->
 
 
 				                <div id="devices" class="tab-pane fade">
-					                 <?php echo $lang['media1']; ?>
+					                 <h2 class="container text-gray-chateau page-header" style="border-color: #3F4245;padding-top: 10px;padding-bottom: 10px;width: 30%;">Der Medienclient</h2>
+					                  
+									  <br/>
+								      <p>Eine einfache Oberfläche zum Organisieren aller Medien: <span class="text-gamboge">Filme</span> und <span class="text-gamboge">TV-Sammlungen</span>, und <span class="text-gamboge">Musikbibliothek</span>. Ein Client, der die Medienbibliothek durch Hinzufügen von Beschreibungen, Handlungszusammenfassungen, Postern und Albumcovers bereichert. Genießen Sie die Medien auf jedem Fernseher im Haus oder auf jedem mobilen Gerät für Unterwegs. </p>
+
+					                <div class="main-header">
+					                    <div class="logo">
+						                    <a href="https://www.plex.tv"><img src="images/plex-logo-reversed.png" alt="STREAMNET" width="350" class="img-responsive"></a>
+					                    </div>
+					                </div>
+
+					                <p><span class="text-gamboge"> <a href="http://www.plex.tv/apps">PLEX Apps</a></span> auf Ihren Lieblingstelefonen, Tablets, Streaming Geräten, Spielekonsolen und Smart-TVs <br/> und nehmen Sie den wundervollen <span class="text-gamboge">StreamNet</span> Medienserver auf jeden beliebigen Gerät mit.</p>
+
+						            <div class="main-header">
+					                    <div class="logo">
+						                     <a href="https://www.plex.tv/apps"><img src="images/plex-apps.png" alt="STREAMNET" width="500" class="img-responsive"></a>
+					                    </div>
+					                </div>
 				                </div>
 
 							    <div id="contact" class="tab-pane fade">
-								    <?php echo $lang['contact1']; ?> 
+								    <h2 class="container text-gray-chateau page-header" style="border-color: #3F4245;padding-top: 10px;padding-bottom: 10px;width: 30%;">Konaktiere uns</h2>
+						                <form method="post" action="inc/contactform.php?lang=de">
+												<div class="form-signin">												    
+													 <input type="text" name="contact_name" id="contact_name" placeholder="Vollständiger Name" class="form-control" style="margin-bottom: 10px; background-color:#000000B3;"  required autofocus >
+													 <input type="email" name="contact_email" id="contact_email" placeholder="Email" class="form-control" style="margin-bottom: 10px; background-color:#000000B3;"  required >
+													 <input type="text" name="contact_subject" id="contact_subject" placeholder="Betreff" class="form-control" style="margin-bottom: 10px; background-color:#000000B3;"  required >
+							                         <textarea style="background-color:#000000B3; height: 200px;" type="text" name="contact_message" id="contact_message" placeholder="Verfasse deine Nachricht" class="form-control" required ></textarea>
+							                         <br/>
+													 
+                                                                         
+								                     <input type="submit" name="submit" value="Sende Nachricht" class="btn btn-primary">
+				                  	                 <input type="reset" value="Reset" class="btn btn-default">
+							                    </div>
+						       	        </form>
+										<br/> 
 							    </div>
 
 
 							    <div id="faq" class="tab-pane fade">
-								  <?php echo $lang['faq1']; ?>    
+								  <h2 class="container text-gray-chateau page-header" style="border-color: #3F4245;padding-top: 10px;padding-bottom: 10px;width: 50%;">Fragen und Antworten</h2>
+					    	         
+									 <br/>
+									 <h4 style="text-align: left">Was ist StreamNet ?</h4>
+								     <p style="text-align: left"><span class="text-gamboge">StreamNet</span> ist ein Streaming Dienst, mit dem unsere Kunden eine Vielzahl preisgekrönter Fernsehsendungen, Filme, Dokumentationen und mehr auf Tausenden von Geräten mit Internetverbindung ansehen können. Mit <span class="text-gamboge">StreamNet</span>, können Sie unsere Inhalte unbegrenzt anzeigen, ohne einen einzigen Werbespot ansehen zu müssen. Es gibt immer etwas Neues zu entdecken und jeden Tag kommen weitere Fernsehsendungen und Filme hinzu!</p>
+						             <br/>
+						             <h4 style="text-align: left">Fernsehsendungen & Filme</h4>
+									 <p style="text-align: left">Mit <span class="text-gamboge">PLEX</span> das in über 190 Ländern verfügbar ist, erhalten Sie sofortigen Zugriff auf großartige Inhalte. <span class="text-gamboge">StreamNet</span> verfügt über eine umfangreiche globale Inhaltsbibliothek mit preisgekrönten Netflix Originals, Spielfilmen, Dokumentationen, Fernsehsendungen und vielem mehr. Der <span class="text-gamboge">StreamNet</span> Inhalt variiert je nach Region und kann sich im Laufe der Zeit ändern.
+								     <br/>
+						             <br/>
+							         Je mehr Sie sehen, desto besser kann <span class="text-gamboge">StreamNet</span> Fernsehsendungen und Filme empfehlen, die Sie lieben werden. 
+						             <br/>
+						             <br/>
+									 Sie können ohne Werbung oder Zusagen spielen, pausieren und das Ansehen fortsetzen.
+						             <br/>
+						             <br/>
+									 Außerdem können Sie Ihre Lieblingssendungen auf Ihr iOS oder Android Mobilgerät oder Ihren Windows 10 Computer oder Tablet herunterladen. Mit Downloads können Sie unterwegs oder ohne Internetverbindung zuschauen. Gehen Sie voran, binge ein wenig!</p>
+									 <br/>
+								     <h4 style="text-align: left">Streaming Geräte</h4>
+									 <p style="text-align: left">Schauen Sie überall und jederzeit auf Tausenden von Geräten. Mit der <span class="text-gamboge">StreamNet</span> Streaming Software <span class="text-gamboge">PLEX</span> können Sie Inhalte von <span class="text-gamboge">StreamNet</span> sofort über jedes mit dem Internet verbundene Gerät anzeigen, das die <span class="text-gamboge">PLEX App</span> anbietet, einschließlich Smart-TVs, Spielekonsolen, Streaming Media Playern, Smartphones oder Tablets. Sehen Sie sich unsere Internet Geschwindigkeitsempfehlungen an, um die beste Leistung zu erzielen. Sie können <span class="text-gamboge">StreamNet</span> auch direkt von Ihrem Computer oder Laptop streamen. Wir empfehlen, die Systemanforderungen auf <span class="text-gamboge">PLEX</span> Webbrowser Kompatibilität zu überprüfen.<br/>
+						             <br/>
+						             Die <span class="text-gamboge">PLEX App</span> ist möglicherweise auf bestimmten Geräten vorinstalliert, oder Benutzer müssen die <span class="text-gamboge">PLEX App</span> möglicherweise auf ihr Gerät herunterladen. Die Funktionalität der <span class="text-gamboge">PLEX App</span> kann zwischen den Geräten unterschiedlich sein.</p>
+									 <br/>
+								     <h4 style="text-align: left">Loslegen!</h4>
+									 <p style="text-align: left">Befolgen Sie diese einfachen Schritte, um noch heute auf <span class="text-gamboge">StreamNet</span> zu schauen:</p>
+									 <br/>
+									 <ol>
+									 <li style="text-align: left">Laden Sie eine <a href="https://www.plex.tv/apps">PLEX App</a> für Ihr Gerät herunter.</li>
+						             <br/>
+									 <li style="text-align: left">Erstellen Sie eine <a href="https://discord.gg/Aea4uuS">StreamNet-Einladung</a> für <a href="https://www.plex.tv">Plex.tv</a>, indem Sie entweder Ihre <span class="text-gamboge">PLEX-Anmeldeinformationen</span> eingeben oder ein neues <span class="text-gamboge">PLEX-Konto</span> erstellen.</li>
+								     <br/>
+									 <li style="text-align: left">Akzeptieren Sie die <span class="text-gamboge">StreamNet Einladung</span>, die Sie per E-Mail von <span class="text-gamboge">PLEX</span> erhalten.</li>
+									 <br/>
+									 <li style="text-align: left">Öffnen Sie die <a href="https://www.plex.tv/apps">PLEX App</a> und melden Sie sich mit Ihrem <span class="text-gamboge">PLEX Konto</span> an. Der <span class="text-gamboge">StreamNet</span> Server wird gestartet.</li>
+									 </ol>
+									 <br/>
+									 <p style="padding-left:2%;text-align: left">Et voilà. Happy<strong class="text-gamboge"> Stream..Neting!</strong></p>
+						        </div>    
 						    </div>
 							
 							<p class="page-header"></p>
@@ -446,14 +503,68 @@
 		<div class="text-center">
 		    <div id="support" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true" class="modal" style="display: none;">
 			    <div class="modal-dialog">
-				  <?php echo $lang['modalsupport']; ?>  
+				  <div class="modal-content">
+					    <div class="modal-header" align="center">
+							<button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                                                        <img src="images/logo-navbar.png" alt="STREAMNET" width="350" class="img-responsive">
+
+						        <div class="text-center">
+						          <h4 class="text-gray-chateau" style="border-color: #3F4245;padding-bottom: 10px;">SUPPORT TICKET<p class="text-gamboge" style="padding-top:15px;">HelpDesk</p></h4>
+						        </div>
+					    </div>
+				        <div class="modal-body">
+					        <form method="post" action="inc/supportform.php?lang=de">
+							    <div class="form">
+								 <input style="margin-bottom:8px; background-color:#000000B3;" type="text" name="full_name" id="full_name" placeholder="Vollständiger Name" class="form-control" required autofocus >
+								 
+                                                                 <input style="margin-bottom:8px; background-color:#000000B3;" type="text" name="plex_username" id="plex_username" placeholder="Plex Username" class="form-control" required >
+								 
+                                                                 <input style="margin-bottom:8px; background-color:#000000B3;" type="email" name="support_email" id="support_email" placeholder="Email" class="form-control" required >
+								 
+                                                                 <input style="margin-bottom:8px; background-color:#000000B3;" type="text" name="support_subject" id="support_subject" placeholder="Womit können wir dir helfen?" class="form-control" required >
+						                 
+                                                                 <textarea style="background-color:#000000B3; height: 200px;" type="text" name="support_message" id="support_message" placeholder="Verfasse deine Nachricht" class="form-control" required ></textarea>
+							    </div>
+		                         </div>
+
+				        <div class="modal-footer">
+					         <input type="submit" name="submit" value="Ticket absenden" class="btn btn-primary">
+				             <input type="reset" value="Reset" class="btn btn-default">
+			            </div>
+		                    </form>
+
+			        </div>  
 			    </div>
 		    </div>
 		</div>
 		
 		<div class="text-center">
 		    <div id="howit" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true" class="modal" style="display: none;">
-			     <?php echo $lang['modalhowit']; ?> 
+			     <div class="modal-dialog">
+				    <div class="modal-content">
+					    <div class="modal-header" align="center">
+							<button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                            <img src="images/logo-navbar.png" alt="STREAMNET" width="350" class="img-responsive">
+
+						        <div class="text-center">
+						          <h4 class="text-gray-chateau" style="border-color: #3F4245;padding-bottom: 10px;">Wie funktioniert es..</h4>
+						        </div>
+					            </div>
+				                   <div class="modal-body">
+									 <p style="text-decoration:underline;">Befolge diese einfachen Schritte um noch heute auf <span class="text-gamboge">StreamNet</span> zu schauen:</p>
+									 <br/>
+									 <p style="padding-left:2%;text-align: left"> Erstens ladt dir eine  <a href="https://www.plex.tv/apps">PLEX App</a> für dein Gerät, herunter.</p>
+						             <br/>
+									 <p style="padding-left:2%;text-align: left">Dann erstelle dir eine <a href="https://discord.gg/Aea4uuS">StreamNet Einladung</a> für <a href="https://www.plex.tv">Plex.tv</a> indem du deine <span class="text-gamboge">PLEX Daten</span> eingibst oder dir ein neues <span class="text-gamboge">PLEX Konto</span> einrichtest.</p>
+								     <br/>
+									 <p style="padding-left:2%;text-align: left">Danach musst du die <span class="text-gamboge">StreamNet Einladung</span>, die dir per Email von <span class="text-gamboge">PLEX</span> geschickt worden ist, akzeptieren.</p>
+									 <br/>
+									 <p style="padding-left:2%;text-align: left">Zuletzt öffne deine <a href="https://www.plex.tv/apps">PLEX App</a> und log dich mit deinem <span class="text-gamboge">PLEX Konto</span> ein und sehe wie der <span class="text-gamboge">StreamNet</span> Server startet.</p>					 
+									 <br/>
+									 <p style="padding-left:2%;text-align: left">Et voilà. Happy<strong class="text-gamboge"> Stream..Neting!</strong></p>
+			                       </div>
+			        </div>
+		         </div> 
 		      </div>
 			  </div>
 			  
@@ -465,16 +576,13 @@
 			<div class="footer bg-black">
               <br/>
  				<div class="" style="float: right;margin-top:;margin-right:20px;">
- 	              <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Github" href="https://github.com/Cyb3rGh05t" target="_blank"><i style="" class="fab fa-github fa-footer-github fa-2x"></i></a>
+ 	              <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Github" href="https://github.com/cyb3rgh05t" target="_blank"><i style="" class="fab fa-github fa-footer-github fa-2x"></i></a>
  				  <span style="padding-left:5px;padding-right:5px;"></span>
-				  <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Discord" href="https://discord.gg/Aea4uuS" target="_blank"><i class="fab fa-discord fa-footer-discord fa-2x"></i></a>
-				 <span style="padding-left:5px;padding-right:5px;"></span>
-				  <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Telegram" href="https://t.me/joinchat/S_ZvjhypXWdaipYUfVwW4A" target="_blank"><i class="fab fa-telegram fa-2x" style="color:#0088cc;"></i></a>
- 
+				  <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Discord" href="https://discord.gg/Aea4uuS" target="_blank"><i class="fab fa-discord fa-footer-discord fa-2x"></i></a> 
                                  <br/>
  				</div>
 			    <div class="" style="font-size:11px;float: left;margin-left:20px;">
-				  <p>&copy; 2014 - <?php echo date("Y"); ?>&nbsp; <a href="https://mystreamnet.club">StreamNet.Club</a><br/><i style="font-size:9px;">StreamNet.Club is not affiliated to Plex.Inc</i></p>
+				  <p>&copy; 2014 - <?php echo date("Y"); ?>&nbsp; <a href="https://streamnet.club">StreamNet.Club</a><br/><i style="font-size:9px;">StreamNet.Club is not affiliated to Plex.Inc</i></p>
                 <div style="clear: both"></div>
                 </div>
 	        </div>

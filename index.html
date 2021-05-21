@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 
-	<head>
-
-		<!--  Custom Meta  -->
-
-		<!-- Meta -->
+<!-- Meta -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -42,19 +39,17 @@
         <link href="css/jquery.fadeshow-0.1.1.min.css" rel="stylesheet"/>
 		<link href="css/fontawesome/css/all.min.css" rel="stylesheet">
 		
-		<script src="https://www.google.com/recaptcha/api.js"></script>
-
   		
 		<!--  SlideShow  -->
 		
         <script src="js/jquery-3.4.1.min.js"></script>
-	        <script src="js/jquery.fadeshow-0.1.2.min.js" type="text/javascript"></script>
-	        <script type="text/javascript">
-	            $(function(){
-		            var fadeShow = $(".background").fadeShow({
-			        correctRatio: true,
-			        shuffle: true,
-			        speed: 7000,
+	    <script src="js/jquery.fadeshow-0.1.2.min.js" type="text/javascript"></script>
+	    <script type="text/javascript">
+	             $(function(){
+		         var fadeShow = $(".background").fadeShow({
+			     correctRatio: true,
+			     shuffle: true,
+			     speed: 7000,
 			        images: ['images/covers/image0.jpg',
 					         'images/covers/image1.jpg',
 					         'images/covers/image2.jpg',
@@ -218,7 +213,7 @@
                   }
 
                </style>
-	</head>
+</head>
 
 
 	<body>
@@ -246,22 +241,22 @@
 							 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                              <input type="hidden" name="cmd" value="_s-xclick" />
                              <input type="hidden" name="hosted_button_id" value="LLBS9N68SPSPE" />
-                             <input type="image" src="https://www.rvh.on.ca/enewsletter/SiteAssets/SitePages/enewletter/donatebutton.png" width="150" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                             <input type="image" src="https://semperfifund.org/wp-content/uploads/2017/11/Donate-Button.png" width="150" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                              <img alt="" border="0" src="https://www.paypal.com/en_LU/i/scr/pixel.gif" width="1" height="1" />
                              </form>							                          
 							</li>
-                            <li><a id="added" href="./releases"><i class="far fa-play-circle" aria-hidden="true"></i>&nbsp;
-							<?php echo $lang['recentlyadded']; ?></a></li>
+                            <li><a id="added" href=""><i class="far fa-play-circle" aria-hidden="true"></i>&nbsp;
+							Zuletzt hinzugefügte Filme/Serien
 	 					    <li><a id="helpdesk" href="#" data-toggle="modal" data-target="#support"><i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;
-							<?php echo $lang['support']; ?></a></li>
+							Support
 							<li style="margin-right: 5px;"><a id="howitworks" href="#" data-toggle="modal" data-target="#howit"><i class="fas fa-info-circle fas-2x" aria-hidden="true"></i>&nbsp;
-							<?php echo $lang['howitworks']; ?></a></li>
+							Wie funktioniert's
 							<!-- <a style="margin-right: 10px;padding-top: 13px;" class="navbar-brand" href="./?lang=de"><img src="images/de.webp" alt="StreamNet.Club" width="30"class="img-responsive"></a>
-                            <a style="margin-right: 10px;padding-top: 13px;" class="navbar-brand" href="./?lang=en"><img src="images/en.webp" alt="StreamNet.Club" width="30"class="img-responsive"></a> -->
+                            <a style="margin-right: 10px;padding-top: 13px;" class="navbar-brand" href="./?lang=en"><img src="images/en.webp" alt="StreamNet.Club" width="30"class="img-responsive"></a>
                             <li><a id="langEN" style="background-color:#1f1f1f;padding-right: 0px;" href="./?lang=en"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
 							EN</a></li>
 							<li><a id="langDE" style="background-color:#1f1f1f;margin-right: 0px;" href="./?lang=de"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
-							DE</a></li>
+							DE</a></li> -->
 	 				    </ul>
 	 				</div>
 	 		    </div>
@@ -276,37 +271,37 @@
 	 	    <div id="test" class="main-header text-center">
 	 		    <div class="elements">
 	 				    <div class="logo page-header">
-	 				      <img style="padding-top: 7%;" src="images/logo-header.png" alt="STREAMNET" width="1200" class="img-responsive">
+	 				      <img style="padding-top: 7%;" src="images/logo-header.png" alt="STREAMNET" width="2000" class="img-responsive">
 	 			        </div>
 						<div>
-	 			        <p class="screen" style="background-color:#000000B3; margin:0px 30% 0px 30%; padding:0.5% 0.5%;" ><?php echo $lang['slogan']; ?></p>	 			       
+	 			        <p class="screen" style="background-color:#000000B3; margin:0px 30% 0px 30%; padding:0.5% 0.5%;" >Die Zukunft des <span>Streamings </span>ist gelanded.... Netflix war gestern...</p>	 			       
 						<br/>
 						<br/>
 						<div>
 	 			        <form method="post" id="loginform" class="navbar-form" role="form">
 	 				    <div class="form-group">
-	 					<?php echo $lang['loginform']; ?>     
+	 					<input id="email" name="PlexEmail" style="border-color:#E5A00D; background-color:#000000B3;" type="text" placeholder="Plex Email oder Benutzername" autofocus required class="form-control">     
 	 				    </div>
 	 				    <div style="position: relative;" class="form-group">
 	 					     <input id="password" name="PlexPassword" style="border-color:#E5A00D; background-color:#000000B3;" type="password" placeholder="Plex Password" required class="form-control">							 
-							 <?php echo $lang['forgot']; ?>						
+							 <a id="lnkforget" class="hyperlink" style="position: absolute;top: 7px;right: 1px;" href=" https://www.plex.tv/sign-in/password-reset/" target="_blank">Vergessen&nbsp;<i class="fa fa-question-circle" aria-hidden="true"></i></a>					
                              <!-- <a id="lnkforget" class="hyperlink" style="position: absolute;top: 7px;right: 0px;" href="" data-toggle="modal" data-target="#pass">Forgot&nbsp;<i class="fa fa-question-circle" aria-hidden="true"></i></a> -->
                         </div>					
 	 				    <div style="padding-left: 10px" class="checkbox c-checkbox">
 	 					    <label id="remember">
 	 				        <input type="checkbox" id="indeterminate-checkbox" name="rememberme" value="true" checked>
-	 					    <span class="fa fa-check"></span><?php echo $lang['rememberme']; ?>
+	 					    <span class="fa fa-check"></span>Erinnere Mich
 						    </label>
 	 				    </div>
-	 					     <button type="submit" name="action" class="btn btn-primary"><i class="fas fa-sign-in-alt" aria-hidden="true"></i>&nbsp;<?php echo $lang['login']; ?></button>
-							 <?php echo $lang['choice']; ?>
-							 <?php echo $lang['invite']; ?>	    
+	 					     <button type="submit" name="action" class="btn btn-primary"><i class="fas fa-sign-in-alt" aria-hidden="true"></i>&nbsp;Einloggen</button>
+							 oder
+							 <a type="button" href="./beinvited?lang=de" class="btn btn-primary"><i class="fas fa-user-plus" aria-hidden="true"></i>&nbsp;Beitreten</a>    
 	                    </form>
 					    </div>
 					    <br/>
                         <br/>
-                        <?php echo $lang['discord']; ?>
-                   <!-- <div style="background-color:#000000B3; margin:0px 40% 0px 40%; padding:0.5% 0.5%;" class="screen">Don't have an Invite&nbsp;<i class="fa fa-question-circle" aria-hidden="true"></i></div>						
+                        <div style="background-color:#000000B3; margin:0px 25% 0px 25%; padding:0.5% 0.5%;" class="screen">Folge <span class="text-gamboge">StreamNet.Club</span> auf <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Discord" href="https://discord.gg/Aea4uuS" target="_blank"><i class="fab fa-discord fa-inverse-discord fa-2x"></i></a> Discord für Hilfe und sofortige Mitteilungen über neue Filme/Serien zu bekommen.</div>
+                        <!-- <div style="background-color:#000000B3; margin:0px 40% 0px 40%; padding:0.5% 0.5%;" class="screen">Don't have an Invite&nbsp;<i class="fa fa-question-circle" aria-hidden="true"></i></div>						
 						<br/>
 					    <a type="button" href="./?page=join" class="btn btn-primary"><i class="fas fa-user-plus" aria-hidden="true"></i>&nbsp;Create Invite</a> -->
                         </div>
